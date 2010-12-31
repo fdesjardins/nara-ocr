@@ -1,0 +1,4 @@
+import sys, os
+
+for x in range(0,39):
+    os.rename('X_' + str(x) + ".png", '0_' + str(x) + ".png")

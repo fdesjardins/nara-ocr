@@ -1,0 +1,5 @@
+﻿Oct 30, 2010
+ 
+        More concept testing with Ocropus. It seems tuned to pull out text columns, as far as document layout analysis. 
+ 
+        Toolkits being evaluated: Openfst, Ocropus, iulib (image understanding), ocropy, pyopenFst

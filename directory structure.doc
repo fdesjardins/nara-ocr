@@ -1,0 +1,45 @@
+﻿trunk:
+
+Contains everything considered a part of the final conversion application. 
+
+	trunk/config: configuration files used during the conversion process.
+	trunk/doc: documentation for application.
+	trunk/input_images: the original assembly images provided by Prof. McGraw
+	trunk/pytesser: the python api for tesseract-ocr.
+	trunk/src: all scripts used throughout the project.
+	trunk/step_output: will contain the output file after conversion.
+	trunk/temp: temporary workspace used during conversion operation.
+
+archive:
+
+Contains duplicates of most files in trunk, with the addition of anything that was used or created during the course of the project. This includes logs, reports, character data, scripts, training images, training data (box files, tesseract archives, wordlists), and more. 
+
+	archive/analysis: useful information collected about assembly images using the default english configuration.
+	archive/logs: all logs kept by Forrest during the development process.
+	archive/reports: information turned in at report times.
+	archive/scripts:
+	
+		archive/scripts/extract_boxes: 
+
+			output from extracting/cropping images based on locations 					provided by tesseract box files. 
+
+		archive/scripts/segmentation:
+
+			output from a variety of segmentation methods provided by
+			ocropus as well as scripts pertaining to segmentation.
+
+		archive/scripts/training:
+
+			data and scripts used to train tesseract on a massive scale.
+			contains everything necessary to build training images that
+			can be fed to tesseract to create box files and eventually
+			language data. 
+
+			Important: contains the database of mined characters from 					original assembly images. Over 2 million individual images.
+	
+	archive/training, 
+	archive/training_data,
+	archive/training_results:
+
+		additional scripts and data produced for/by training tesseract. 
+

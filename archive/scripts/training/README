@@ -1,0 +1,50 @@
+This folder contains the database of characters that were generated using a jitter script, and a stitching script.
+Also, tesseract training was performed in this folder. So, the scattered files are from that process. 
+
+count_chars.py: 
+
+simply counts the number of characters in a file, excluding spaces.
+usage: "python count_chars.py wordlist"
+
+
+
+dict_stitch.py: 
+
+the keystone of the training images generation. Takes a wordlist, and fetches a random character from
+                one of the folders (char_A/A/) for each character of the wordlist. It builds a single image containing these
+                constructed words, for use with training tesseract.
+usage: "python dict_stitch.py wordlist"
+
+
+
+jitter.py: 
+
+jitters 1 or many input images, and places the jittered output images into the same directory as the input image[s].
+usage: "python jitter.py char_A/A_0.png"
+
+
+
+jitter_all.py: 
+
+runs jitter.py over all of the images in current directory
+usage: "python jitter_all.py"
+
+
+
+train.py: 
+
+uses BASH commands to either make a box file from a tif image, or train from a box file and tif image
+usage: "train.py [inputImg] -makebox" 
+       OR 
+       "train.py [inputImg]"
+
+
+
+utils.py: 
+
+contains some general use functions.
+usage: "from utils import *"
+
+
+
+

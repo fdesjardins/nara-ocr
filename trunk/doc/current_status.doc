@@ -1,0 +1,31 @@
+﻿Dec 30, 2010
+
+Only the FILE_NAME and FILE_DESCRIPTION are generated to a STEP-file currently. Due to time constraints, the part list section of the STEP-file is not being generated. However, there was a lot of progress made in terms of performance, especially in tesseract-ocr. 
+
+The part list can be extracted in a similar manner that the previous two were, with few requirements:
+
+1. A function should be designed that can identify the region the parts are located in
+
+2. Crop the part list out of the image
+
+3. Use segmentation to remove non-text
+
+4. Segment into regions, which should result in table rows
+
+5. Perform OCR on these rows employing tesseract's dictionary
+
+6. (optional) Run results through spell-checker
+
+
+All but number 1 have already been accomplished in extracting FILE_NAME and FILE_DESCRIPTION. The main difficulty lies in identifying the tabular regions in the image. 
+
+
+To do:
+
+One thought - Run the entire image through tesseract, and generate a box file. Search this box file for the expected title of the part table (“LIST OF MATERIAL” in these images), and record the coordinates of any matches. From here, a type of segmentation could be used to find the width and height of the title box.
+
+There is already a basic Canny edge detection script that may be useful, and a region growing method could be used, based on pixel intensities.
+
+With the coordinates of the title block, simply extend this region downward using boxes of the same dimensions as the title block. Check each of these new regions text to non-text ratios, until the ratio is extremely low, signify the end of the table. 
+
+The region formed now contains the table “LIST OF MATERIAL”, and now this region can be segmented using RAST, and parts parsed out. 

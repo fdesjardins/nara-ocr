@@ -1,0 +1,7 @@
+﻿October 22, 2010
+ 
+        Spent most of my time today researching training data generation. Only worthwhile jitter routine was in Matlab, so I decided to write my own in Python. That went way better than anticipated, and we now have a very smooth jitter function to use on our collected data. 
+ 
+        First run was amazing. I generated 10,920 new images from the single input image. ~7kb to ~72mb. Had to scale back, of course, but it was an amazing success. 
+ 
+        Just need to clean it up a bit, and then think about the best way to employ its use.

@@ -1,0 +1,12 @@
+﻿Nov 1, 2010
+10:00am - 11:00am
+ 
+        Reading more literature about document layout analysis. 
+ 
+Articles
+ 
+1. Word Extraction from Table Regions in Document Images 
+ 
+Tools
+ 
+ABBYY OCR and Document Analysis - NOT open sourced

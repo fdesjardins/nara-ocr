@@ -1,0 +1,3 @@
+﻿Oct 29, 2010
+ 
+        Searching for document layout analysis tools turned up one very promising program called ocrfeeder, which is specifically tailored for converting large scanned images in ODT or PDF formats.
