@@ -40,6 +40,10 @@ One thought: run the entire image through tesseract, and generate a box file. Se
 
 There is already a basic Canny edge detection script that may be useful, and a region growing method could be used, based on pixel intensities.
 
-With the coordinates of the title block, extend this region downward using boxes of the same dimensions as the title block. Check each of these new regions text to non-text ratios, until the ratio is extremely low, signify the end of the table. 
+With the coordinates of the title block, extend this region downward using boxes of the same dimensions as the title block. Check each of these new regions text to non-text ratios, until the ratio is extremely low, signify the end of the table.
 
 The region formed now contains the table “LIST OF MATERIAL”, and now this region can be segmented using RAST, and parts parsed out.
+
+## License
+
+MIT © Forrest Desjardins
