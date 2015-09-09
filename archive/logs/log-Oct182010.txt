@@ -1,5 +1,0 @@
-﻿Oct 18, 2010
- 
-        Researching larger handwritten character recognition data sets. The two large databases seem to be the Cedar USPS database of cities, states, zip codes, etc, and the MNIST database of upper-case characters. Both of these databases seem to be available at cost, only. 
- 
-RIMES also appears to be a well known database for character recognition tasks.
